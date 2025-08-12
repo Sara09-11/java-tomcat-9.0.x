@@ -1,0 +1,2488 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:943809fa-76b3-4816-98d5-fdc3f2259bf2",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-08-12T07:57:56Z",
+        "tools": {
+            "components": [
+                {
+                    "group": "@cyclonedx",
+                    "name": "cdxgen",
+                    "version": "11.4.3",
+                    "purl": "pkg:npm/%40cyclonedx/cdxgen@11.4.3",
+                    "type": "application",
+                    "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.4.3",
+                    "publisher": "OWASP Foundation",
+                    "authors": [
+                        {
+                            "name": "OWASP Foundation"
+                        }
+                    ]
+                }
+            ]
+        },
+        "authors": [
+            {
+                "name": "OWASP Foundation"
+            }
+        ],
+        "lifecycles": [
+            {
+                "phase": "build"
+            }
+        ],
+        "component": {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-owb",
+            "version": "2.0.27",
+            "properties": [
+                {
+                    "name": "SrcFile",
+                    "value": "/Users/fadiyassin/Downloads/java-tomcat-9.0.x/modules/owb/pom.xml"
+                }
+            ],
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-owb@2.0.27?type=jar",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-owb@2.0.27?type=jar",
+            "type": "application",
+            "components": [
+                {
+                    "group": "org.apache.tomcat",
+                    "name": "tomcat-jdbc",
+                    "version": "1.1.0-SNAPSHOT",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-jdbc@1.1.0-SNAPSHOT?type=jar",
+                    "type": "application",
+                    "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-jdbc@1.1.0-SNAPSHOT?type=jar",
+                    "properties": [
+                        {
+                            "name": "SrcFile",
+                            "value": "/Users/fadiyassin/Downloads/java-tomcat-9.0.x/modules/jdbc-pool/pom.xml"
+                        }
+                    ]
+                },
+                {
+                    "group": "org.apache.tomcat",
+                    "name": "tomcat-cxf",
+                    "version": "3.6.6",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-cxf@3.6.6?type=jar",
+                    "type": "application",
+                    "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-cxf@3.6.6?type=jar",
+                    "properties": [
+                        {
+                            "name": "SrcFile",
+                            "value": "/Users/fadiyassin/Downloads/java-tomcat-9.0.x/modules/cxf/pom.xml"
+                        }
+                    ]
+                }
+            ]
+        },
+        "properties": [
+            {
+                "name": "cdx:bom:componentTypes",
+                "value": "maven"
+            },
+            {
+                "name": "cdx:bom:componentNamespaces",
+                "value": "com.fasterxml.woodstox\\ncom.h2database\\ncom.sun.activation\\ncom.sun.istack\\njakarta.activation\\njakarta.annotation\\njakarta.ejb\\njakarta.el\\njakarta.enterprise\\njakarta.inject\\njakarta.interceptor\\njakarta.transaction\\njakarta.ws.rs\\njakarta.xml.bind\\njavax.json\\njavax.json.bind\\njunit\\norg.apache.cxf\\norg.apache.geronimo.specs\\norg.apache.johnzon\\norg.apache.openwebbeans\\norg.apache.tomcat\\norg.apache.ws.xmlschema\\norg.apache.xbean\\norg.codehaus.woodstox\\norg.glassfish.jaxb\\norg.hamcrest"
+            },
+            {
+                "name": "cdx:bom:componentSrcFiles",
+                "value": "modules/cxf/pom.xml\\nmodules/jdbc-pool/pom.xml\\nmodules/owb/pom.xml"
+            }
+        ]
+    },
+    "components": [
+        {
+            "group": "org.apache.geronimo.specs",
+            "name": "geronimo-atinject_1.0_spec",
+            "version": "1.2",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.geronimo.specs/geronimo-atinject_1.0_spec@1.2?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.geronimo.specs/geronimo-atinject_1.0_spec@1.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.geronimo.specs",
+            "name": "geronimo-interceptor_1.2_spec",
+            "version": "1.2",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.geronimo.specs/geronimo-interceptor_1.2_spec@1.2?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.geronimo.specs/geronimo-interceptor_1.2_spec@1.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.geronimo.specs",
+            "name": "geronimo-jcdi_2.0_spec",
+            "version": "1.3",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.geronimo.specs/geronimo-jcdi_2.0_spec@1.3?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.geronimo.specs/geronimo-jcdi_2.0_spec@1.3?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                },
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            },
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.openwebbeans",
+            "name": "openwebbeans-spi",
+            "version": "2.0.27",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.openwebbeans/openwebbeans-spi@2.0.27?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-spi@2.0.27?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.openwebbeans",
+            "name": "openwebbeans-impl",
+            "version": "2.0.27",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.openwebbeans/openwebbeans-impl@2.0.27?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-impl@2.0.27?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.xbean",
+            "name": "xbean-finder-shaded",
+            "version": "4.21",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.xbean/xbean-finder-shaded@4.21?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.xbean/xbean-finder-shaded@4.21?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.xbean",
+            "name": "xbean-asm9-shaded",
+            "version": "4.21",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.xbean/xbean-asm9-shaded@4.21?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.xbean/xbean-asm9-shaded@4.21?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.openwebbeans",
+            "name": "openwebbeans-web",
+            "version": "2.0.27",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.openwebbeans/openwebbeans-web@2.0.27?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-web@2.0.27?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.openwebbeans",
+            "name": "openwebbeans-el22",
+            "version": "2.0.27",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.openwebbeans/openwebbeans-el22@2.0.27?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-el22@2.0.27?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-catalina",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-catalina@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-servlet-api",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-servlet-api@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-servlet-api@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-jsp-api",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-jsp-api@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-jsp-api@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-el-api",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-el-api@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-el-api@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-juli",
+            "version": "9.0.102",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-juli@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-juli@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                },
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/jdbc-pool/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            },
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/jdbc-pool/pom.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-annotations-api",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-annotations-api@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-annotations-api@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-api",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-api@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-api@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-jni",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-jni@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-jni@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-coyote",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-coyote@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-util",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-util@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-util@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-util-scan",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-util-scan@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-util-scan@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-jaspic-api",
+            "version": "9.0.102",
+            "scope": "excluded",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-jaspic-api@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-jaspic-api@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "provided"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/owb/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/owb/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/owb/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "junit",
+            "name": "junit",
+            "version": "4.13.2",
+            "scope": "optional",
+            "purl": "pkg:maven/junit/junit@4.13.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/junit/junit@4.13.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "test"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/jdbc-pool/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/jdbc-pool/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/jdbc-pool/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "test"
+            ]
+        },
+        {
+            "group": "org.hamcrest",
+            "name": "hamcrest-core",
+            "version": "1.3",
+            "scope": "optional",
+            "purl": "pkg:maven/org.hamcrest/hamcrest-core@1.3?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/org.hamcrest/hamcrest-core@1.3?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "test"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/jdbc-pool/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/jdbc-pool/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/jdbc-pool/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.apache.tomcat",
+            "name": "tomcat-dbcp",
+            "version": "9.0.102",
+            "scope": "optional",
+            "purl": "pkg:maven/org.apache.tomcat/tomcat-dbcp@9.0.102?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-dbcp@9.0.102?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "test"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/jdbc-pool/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/jdbc-pool/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/jdbc-pool/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "com.h2database",
+            "name": "h2",
+            "version": "2.2.220",
+            "scope": "optional",
+            "purl": "pkg:maven/com.h2database/h2@2.2.220?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/com.h2database/h2@2.2.220?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "test"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/jdbc-pool/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/jdbc-pool/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/jdbc-pool/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "javax.json",
+            "name": "javax.json-api",
+            "version": "1.1.4",
+            "scope": "required",
+            "purl": "pkg:maven/javax.json/javax.json-api@1.1.4?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/javax.json/javax.json-api@1.1.4?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "javax.json.bind",
+            "name": "javax.json.bind-api",
+            "version": "1.0",
+            "scope": "required",
+            "purl": "pkg:maven/javax.json.bind/javax.json.bind-api@1.0?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/javax.json.bind/javax.json.bind-api@1.0?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-integration-cdi",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-integration-cdi@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-integration-cdi@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "jakarta.enterprise",
+            "name": "jakarta.enterprise.cdi-api",
+            "version": "2.0.2",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@2.0.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@2.0.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.el",
+            "name": "jakarta.el-api",
+            "version": "3.0.3",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.el/jakarta.el-api@3.0.3?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.el/jakarta.el-api@3.0.3?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.interceptor",
+            "name": "jakarta.interceptor-api",
+            "version": "1.2.5",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@1.2.5?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@1.2.5?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.ejb",
+            "name": "jakarta.ejb-api",
+            "version": "3.2.6",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.ejb/jakarta.ejb-api@3.2.6?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.ejb/jakarta.ejb-api@3.2.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.transaction",
+            "name": "jakarta.transaction-api",
+            "version": "1.3.2",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.inject",
+            "name": "jakarta.inject-api",
+            "version": "1.0.3",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.inject/jakarta.inject-api@1.0.3?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.inject/jakarta.inject-api@1.0.3?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-core",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-core@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-core@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.glassfish.jaxb",
+            "name": "jaxb-runtime",
+            "version": "2.3.5",
+            "scope": "required",
+            "purl": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@2.3.5?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@2.3.5?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.glassfish.jaxb",
+            "name": "txw2",
+            "version": "2.3.5",
+            "scope": "required",
+            "purl": "pkg:maven/org.glassfish.jaxb/txw2@2.3.5?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/org.glassfish.jaxb/txw2@2.3.5?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "com.sun.istack",
+            "name": "istack-commons-runtime",
+            "version": "3.0.12",
+            "scope": "required",
+            "purl": "pkg:maven/com.sun.istack/istack-commons-runtime@3.0.12?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/com.sun.istack/istack-commons-runtime@3.0.12?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "com.sun.activation",
+            "name": "jakarta.activation",
+            "version": "1.2.2",
+            "scope": "required",
+            "purl": "pkg:maven/com.sun.activation/jakarta.activation@1.2.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/com.sun.activation/jakarta.activation@1.2.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "runtime"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "com.fasterxml.woodstox",
+            "name": "woodstox-core",
+            "version": "6.6.2",
+            "scope": "required",
+            "purl": "pkg:maven/com.fasterxml.woodstox/woodstox-core@6.6.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/com.fasterxml.woodstox/woodstox-core@6.6.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.codehaus.woodstox",
+            "name": "stax2-api",
+            "version": "4.2.2",
+            "scope": "required",
+            "purl": "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.apache.ws.xmlschema",
+            "name": "xmlschema-core",
+            "version": "2.3.1",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.ws.xmlschema/xmlschema-core@2.3.1?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.ws.xmlschema/xmlschema-core@2.3.1?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "jakarta.xml.bind",
+            "name": "jakarta.xml.bind-api",
+            "version": "2.3.3",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@2.3.3?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@2.3.3?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.activation",
+            "name": "jakarta.activation-api",
+            "version": "1.2.2",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.activation/jakarta.activation-api@1.2.2?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.activation/jakarta.activation-api@1.2.2?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-rt-rs-client",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-rt-rs-client@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-rt-rs-client@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-rt-transports-http",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-rt-transports-http@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-rt-transports-http@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-rt-frontend-jaxrs",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-rt-frontend-jaxrs@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-rt-frontend-jaxrs@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "jakarta.ws.rs",
+            "name": "jakarta.ws.rs-api",
+            "version": "2.1.6",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.ws.rs/jakarta.ws.rs-api@2.1.6?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.ws.rs/jakarta.ws.rs-api@2.1.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "jakarta.annotation",
+            "name": "jakarta.annotation-api",
+            "version": "1.3.5",
+            "scope": "required",
+            "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@1.3.5?type=jar",
+            "type": "library",
+            "bom-ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@1.3.5?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-rt-security",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-rt-security@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-rt-security@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-rt-rs-extension-providers",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-rt-rs-extension-providers@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-rt-rs-extension-providers@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.cxf",
+            "name": "cxf-rt-rs-json-basic",
+            "version": "3.6.6",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.cxf/cxf-rt-rs-json-basic@3.6.6?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.cxf/cxf-rt-rs-json-basic@3.6.6?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.johnzon",
+            "name": "johnzon-jsonb",
+            "version": "1.2.21",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.johnzon/johnzon-jsonb@1.2.21?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.johnzon/johnzon-jsonb@1.2.21?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.johnzon",
+            "name": "johnzon-mapper",
+            "version": "1.2.21",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.johnzon/johnzon-mapper@1.2.21?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.johnzon/johnzon-mapper@1.2.21?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        },
+        {
+            "group": "org.apache.johnzon",
+            "name": "johnzon-core",
+            "version": "1.2.21",
+            "scope": "required",
+            "purl": "pkg:maven/org.apache.johnzon/johnzon-core@1.2.21?type=jar",
+            "type": "framework",
+            "bom-ref": "pkg:maven/org.apache.johnzon/johnzon-core@1.2.21?type=jar",
+            "properties": [
+                {
+                    "name": "cdx:maven:component_scope",
+                    "value": "compile"
+                },
+                {
+                    "name": "SrcFile",
+                    "value": "modules/cxf/pom.xml"
+                }
+            ],
+            "evidence": {
+                "identity": [
+                    {
+                        "field": "purl",
+                        "confidence": 0.5,
+                        "methods": [
+                            {
+                                "technique": "manifest-analysis",
+                                "confidence": 0.5,
+                                "value": "modules/cxf/pom.xml"
+                            }
+                        ],
+                        "concludedValue": "modules/cxf/pom.xml"
+                    }
+                ]
+            },
+            "tags": [
+                "framework"
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-owb@2.0.27?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.geronimo.specs/geronimo-atinject_1.0_spec@1.2?type=jar",
+                "pkg:maven/org.apache.geronimo.specs/geronimo-interceptor_1.2_spec@1.2?type=jar",
+                "pkg:maven/org.apache.geronimo.specs/geronimo-jcdi_2.0_spec@1.3?type=jar",
+                "pkg:maven/org.apache.openwebbeans/openwebbeans-impl@2.0.27?type=jar",
+                "pkg:maven/org.apache.openwebbeans/openwebbeans-spi@2.0.27?type=jar",
+                "pkg:maven/org.apache.openwebbeans/openwebbeans-web@2.0.27?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-catalina@9.0.102?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.geronimo.specs/geronimo-atinject_1.0_spec@1.2?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.geronimo.specs/geronimo-interceptor_1.2_spec@1.2?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.geronimo.specs/geronimo-jcdi_2.0_spec@1.3?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-spi@2.0.27?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-impl@2.0.27?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.xbean/xbean-asm9-shaded@4.21?type=jar",
+                "pkg:maven/org.apache.xbean/xbean-finder-shaded@4.21?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.xbean/xbean-finder-shaded@4.21?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.xbean/xbean-asm9-shaded@4.21?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-web@2.0.27?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.openwebbeans/openwebbeans-el22@2.0.27?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.openwebbeans/openwebbeans-el22@2.0.27?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-catalina@9.0.102?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.tomcat/tomcat-annotations-api@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-api@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-coyote@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-jaspic-api@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-jni@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-jsp-api@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-juli@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-servlet-api@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-util-scan@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-util@9.0.102?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-servlet-api@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-jsp-api@9.0.102?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.tomcat/tomcat-el-api@9.0.102?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-el-api@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-juli@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-annotations-api@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-api@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-jni@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-coyote@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-util@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-util-scan@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-jaspic-api@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-jdbc@1.1.0-SNAPSHOT?type=jar",
+            "dependsOn": [
+                "pkg:maven/com.h2database/h2@2.2.220?type=jar",
+                "pkg:maven/junit/junit@4.13.2?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-dbcp@9.0.102?type=jar",
+                "pkg:maven/org.apache.tomcat/tomcat-juli@9.0.102?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/junit/junit@4.13.2?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.hamcrest/hamcrest-core@1.3?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.hamcrest/hamcrest-core@1.3?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-dbcp@9.0.102?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/com.h2database/h2@2.2.220?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.tomcat/tomcat-cxf@3.6.6?type=jar",
+            "dependsOn": [
+                "pkg:maven/javax.json.bind/javax.json.bind-api@1.0?type=jar",
+                "pkg:maven/javax.json/javax.json-api@1.1.4?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-integration-cdi@3.6.6?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-rt-frontend-jaxrs@3.6.6?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-rt-rs-client@3.6.6?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-rt-rs-extension-providers@3.6.6?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-rt-rs-json-basic@3.6.6?type=jar",
+                "pkg:maven/org.apache.geronimo.specs/geronimo-jcdi_2.0_spec@1.3?type=jar",
+                "pkg:maven/org.apache.johnzon/johnzon-jsonb@1.2.21?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/javax.json/javax.json-api@1.1.4?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/javax.json.bind/javax.json.bind-api@1.0?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-integration-cdi@3.6.6?type=jar",
+            "dependsOn": [
+                "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@2.0.2?type=jar",
+                "pkg:maven/jakarta.inject/jakarta.inject-api@1.0.3?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-core@3.6.6?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@2.0.2?type=jar",
+            "dependsOn": [
+                "pkg:maven/jakarta.el/jakarta.el-api@3.0.3?type=jar",
+                "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@1.2.5?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/jakarta.el/jakarta.el-api@3.0.3?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@1.2.5?type=jar",
+            "dependsOn": [
+                "pkg:maven/jakarta.ejb/jakarta.ejb-api@3.2.6?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/jakarta.ejb/jakarta.ejb-api@3.2.6?type=jar",
+            "dependsOn": [
+                "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.2?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.2?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/jakarta.inject/jakarta.inject-api@1.0.3?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-core@3.6.6?type=jar",
+            "dependsOn": [
+                "pkg:maven/com.fasterxml.woodstox/woodstox-core@6.6.2?type=jar",
+                "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@2.3.3?type=jar",
+                "pkg:maven/org.apache.ws.xmlschema/xmlschema-core@2.3.1?type=jar",
+                "pkg:maven/org.glassfish.jaxb/jaxb-runtime@2.3.5?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@2.3.5?type=jar",
+            "dependsOn": [
+                "pkg:maven/com.sun.activation/jakarta.activation@1.2.2?type=jar",
+                "pkg:maven/com.sun.istack/istack-commons-runtime@3.0.12?type=jar",
+                "pkg:maven/org.glassfish.jaxb/txw2@2.3.5?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.glassfish.jaxb/txw2@2.3.5?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/com.sun.istack/istack-commons-runtime@3.0.12?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/com.sun.activation/jakarta.activation@1.2.2?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/com.fasterxml.woodstox/woodstox-core@6.6.2?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.ws.xmlschema/xmlschema-core@2.3.1?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@2.3.3?type=jar",
+            "dependsOn": [
+                "pkg:maven/jakarta.activation/jakarta.activation-api@1.2.2?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/jakarta.activation/jakarta.activation-api@1.2.2?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-rt-rs-client@3.6.6?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.cxf/cxf-rt-transports-http@3.6.6?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-rt-transports-http@3.6.6?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-rt-frontend-jaxrs@3.6.6?type=jar",
+            "dependsOn": [
+                "pkg:maven/jakarta.annotation/jakarta.annotation-api@1.3.5?type=jar",
+                "pkg:maven/jakarta.ws.rs/jakarta.ws.rs-api@2.1.6?type=jar",
+                "pkg:maven/org.apache.cxf/cxf-rt-security@3.6.6?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/jakarta.ws.rs/jakarta.ws.rs-api@2.1.6?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@1.3.5?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-rt-security@3.6.6?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-rt-rs-extension-providers@3.6.6?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.cxf/cxf-rt-rs-json-basic@3.6.6?type=jar",
+            "dependsOn": []
+        },
+        {
+            "ref": "pkg:maven/org.apache.johnzon/johnzon-jsonb@1.2.21?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.johnzon/johnzon-mapper@1.2.21?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.johnzon/johnzon-mapper@1.2.21?type=jar",
+            "dependsOn": [
+                "pkg:maven/org.apache.johnzon/johnzon-core@1.2.21?type=jar"
+            ]
+        },
+        {
+            "ref": "pkg:maven/org.apache.johnzon/johnzon-core@1.2.21?type=jar",
+            "dependsOn": []
+        }
+    ],
+    "annotations": [
+        {
+            "bom-ref": "metadata-annotations",
+            "subjects": [
+                "pkg:maven/org.apache.tomcat/tomcat-owb@2.0.27?type=jar"
+            ],
+            "annotator": {
+                "component": {
+                    "group": "@cyclonedx",
+                    "name": "cdxgen",
+                    "version": "11.4.3",
+                    "purl": "pkg:npm/%40cyclonedx/cdxgen@11.4.3",
+                    "type": "application",
+                    "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.4.3",
+                    "publisher": "OWASP Foundation",
+                    "authors": [
+                        {
+                            "name": "OWASP Foundation"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2025-08-12T07:57:56Z",
+            "text": "This Software Bill-of-Materials (SBOM) document was created on Tuesday, August 12, 2025 with cdxgen. The data was captured during the build lifecycle phase. The document describes an application named 'tomcat-owb' with version '2.0.27'. The application also has 2 child modules/components. There are 55 components. The package type in this SBOM is maven with 27 purl namespaces described under components. The components were identified from 3 source files."
+        }
+    ]
+}
